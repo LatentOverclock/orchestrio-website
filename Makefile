@@ -1,4 +1,8 @@
-.PHONY: up down restart logs build
+.PHONY: bootstrap up down restart logs build
+
+bootstrap:
+	git submodule update --init agents-md
+	npm ci --no-audit --no-fund
 
 up:
 	docker network create edge-proxy || true

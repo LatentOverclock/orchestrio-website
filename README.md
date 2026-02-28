@@ -17,6 +17,7 @@ Fresh implementation of the orchestrio.li frontend using the agents-md workflow.
 ## Quick start
 ```bash
 make bootstrap
+# ensure traefik-docker-compose is running first (it creates edge-proxy)
 make up
 ```
 

@@ -5,7 +5,6 @@ bootstrap:
 	npm ci --no-audit --no-fund
 
 up:
-	docker network create edge-proxy || true
 	docker compose up -d --build
 
 down:

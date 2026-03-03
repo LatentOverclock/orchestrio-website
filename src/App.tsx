@@ -13,6 +13,14 @@ const featureCards = [
   }
 ];
 
+const services = [
+  {
+    name: 'Clock Orchestrio',
+    url: 'https://clock.orchestrio.li',
+    description: 'Simple time-tracking tool with live timer, manual entries, and deletable tasks.'
+  }
+];
+
 export default function App() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
@@ -61,6 +69,22 @@ export default function App() {
                 <p className="mt-2 text-slate-300">{item.text}</p>
               </article>
             ))}
+          </section>
+
+          <section id="services" className="mt-12">
+            <h2 className="text-2xl font-semibold">Services</h2>
+            <p className="mt-2 text-slate-300">New deployed services are listed here as they go live.</p>
+            <div className="mt-4 grid gap-4">
+              {services.map((service) => (
+                <article key={service.url} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                  <a href={service.url} className="text-lg font-semibold text-cyan-300 hover:underline" target="_blank" rel="noreferrer">
+                    {service.name}
+                  </a>
+                  <p className="mt-2 text-slate-300">{service.description}</p>
+                  <p className="mt-2 text-xs text-slate-400">{service.url}</p>
+                </article>
+              ))}
+            </div>
           </section>
 
           <section id="status" className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-4 py-2">

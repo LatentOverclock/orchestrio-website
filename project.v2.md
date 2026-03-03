@@ -1,6 +1,9 @@
-# Project Requirements (v2)
+# Project Requirements v2
 
-Consolidated from `project.v1.md` and `project.v2.md`.
+## Change summary from v1
+- Add a dedicated Services section on the landing page.
+- Add an entry for `clock.orchestrio.li` with a short description.
+- Establish a requirement to add newly deployed services to this section.
 
 ## Base Requirements
 - Frontend-only web application (no backend service required).
